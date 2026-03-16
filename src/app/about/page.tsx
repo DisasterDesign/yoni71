@@ -1,47 +1,46 @@
 'use client';
 
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { ABOUT_TEXT } from '@/lib/constants';
+import ScrollReveal from '@/components/animations/ScrollReveal';
+import TextReveal from '@/components/animations/TextReveal';
+import ParallaxImage from '@/components/animations/ParallaxImage';
 
 export default function AboutPage() {
   return (
     <section className="bg-primary min-h-screen">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="flex flex-col items-center gap-12 md:flex-row"
-        >
-          <div className="relative aspect-[3/4] w-full max-w-md flex-shrink-0 overflow-hidden rounded-2xl md:w-1/2">
-            <Image
+        <div className="flex flex-col items-center gap-12 md:flex-row">
+          <ScrollReveal direction="left" className="relative aspect-[3/4] w-full max-w-md flex-shrink-0 md:w-1/2">
+            <ParallaxImage
               src="/images/15-yoni-avatar-photo.jpg"
               alt="יוני — הבעלים של יוני71"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
+              speed={0.1}
+              className="relative aspect-[3/4] w-full rounded-2xl"
             />
-          </div>
+          </ScrollReveal>
 
           {/* Text */}
-          <div className="flex-1">
-            <h1 className="mb-8 text-3xl font-black text-light sm:text-4xl">אודות</h1>
+          <ScrollReveal direction="right" className="flex-1">
+            <TextReveal text="אודות" className="mb-8 text-3xl font-black text-light sm:text-4xl" delay={0.2} />
             <div className="space-y-4">
               {ABOUT_TEXT.map((line, index) => (
-                <p
+                <motion.p
                   key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1, duration: 0.5 }}
                   className={`text-light/90 leading-relaxed ${
                     index <= 1 ? 'text-xl font-bold text-accent' : 'text-lg'
                   }`}
                 >
                   {line}
-                </p>
+                </motion.p>
               ))}
             </div>
-          </div>
-        </motion.div>
+          </ScrollReveal>
+        </div>
       </div>
     </section>
   );

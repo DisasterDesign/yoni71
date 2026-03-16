@@ -1,10 +1,14 @@
 'use client';
 
-import Image from 'next/image';
-import { motion } from 'framer-motion';
 import { EVENTS_PAGE } from '@/lib/constants';
 import { useState } from 'react';
 import WhatsAppModal from '@/components/WhatsAppModal';
+import ScrollReveal from '@/components/animations/ScrollReveal';
+import TextReveal from '@/components/animations/TextReveal';
+import ParallaxImage from '@/components/animations/ParallaxImage';
+import MagneticButton from '@/components/animations/MagneticButton';
+import StaggerContainer from '@/components/animations/StaggerContainer';
+import StaggerItem from '@/components/animations/StaggerItem';
 
 export default function EventsPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,57 +22,44 @@ export default function EventsPage() {
           <span className="mb-4 block font-montserrat text-2xl font-bold text-accent">
             Y-71
           </span>
-          <h1 className="text-3xl font-black text-light sm:text-5xl">
-            {EVENTS_PAGE.heroTitle}
-          </h1>
+          <TextReveal text={EVENTS_PAGE.heroTitle} className="text-3xl font-black text-light sm:text-5xl" delay={0.2} />
         </div>
       </section>
 
       {/* Intro Section */}
       <section className="bg-accent py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mx-auto max-w-4xl px-4"
-        >
+        <ScrollReveal direction="up" className="mx-auto max-w-4xl px-4">
           <p className="mb-6 text-lg font-bold text-primary">{EVENTS_PAGE.intro}</p>
           <p className="mb-8 text-primary/90 leading-relaxed">{EVENTS_PAGE.mainText}</p>
           <h3 className="mb-4 text-2xl font-bold text-primary">
             {EVENTS_PAGE.whyUs.title}
           </h3>
           <p className="text-primary/90 leading-relaxed">{EVENTS_PAGE.whyUs.text}</p>
-        </motion.div>
+        </ScrollReveal>
       </section>
 
       {/* Shawarma Stand */}
       <section className="bg-light py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mx-auto max-w-6xl px-4"
-        >
+        <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col items-center gap-10 md:flex-row">
-            <div className="relative aspect-[4/3] w-full flex-1 overflow-hidden rounded-2xl">
-              <Image
+            <ScrollReveal direction="left" className="w-full flex-1">
+              <ParallaxImage
                 src="/images/08-shawarma-machine.jpg"
                 alt="שיפודי שווארמה במכונה — יוני71"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                speed={0.1}
+                className="relative aspect-[4/3] w-full rounded-2xl"
               />
-            </div>
-            <div className="flex-1">
+            </ScrollReveal>
+            <ScrollReveal direction="right" className="flex-1">
               <h2 className="mb-4 text-2xl font-bold text-primary sm:text-3xl">
                 {EVENTS_PAGE.shawarmaStand.title}
               </h2>
               <p className="text-primary/80 leading-relaxed">
                 {EVENTS_PAGE.shawarmaStand.text}
               </p>
-            </div>
+            </ScrollReveal>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Service Includes */}
@@ -77,54 +68,44 @@ export default function EventsPage() {
           <h2 className="mb-8 text-center text-2xl font-bold text-primary sm:text-3xl">
             מה השירות כולל?
           </h2>
-          <ul className="space-y-4">
+          <StaggerContainer className="space-y-4">
             {EVENTS_PAGE.serviceIncludes.map((item, index) => (
-              <motion.li
+              <StaggerItem
                 key={index}
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
                 className="flex items-start gap-3 rounded-xl bg-white p-4 shadow-sm"
               >
                 <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-green-500 text-sm text-white">
                   ✓
                 </span>
                 <span className="text-primary/90">{item}</span>
-              </motion.li>
+              </StaggerItem>
             ))}
-          </ul>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Burger Stand */}
       <section className="bg-light py-16">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="mx-auto max-w-6xl px-4"
-        >
+        <div className="mx-auto max-w-6xl px-4">
           <div className="flex flex-col items-center gap-10 md:flex-row-reverse">
-            <div className="relative aspect-[4/3] w-full flex-1 overflow-hidden rounded-2xl">
-              <Image
+            <ScrollReveal direction="right" className="w-full flex-1">
+              <ParallaxImage
                 src="/images/11-laffa-wrap-2.jpg"
                 alt="לאפה עם שווארמה — יוני71"
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                speed={0.1}
+                className="relative aspect-[4/3] w-full rounded-2xl"
               />
-            </div>
-            <div className="flex-1">
+            </ScrollReveal>
+            <ScrollReveal direction="left" className="flex-1">
               <h2 className="mb-4 text-2xl font-bold text-primary sm:text-3xl">
                 {EVENTS_PAGE.burgerStand.title}
               </h2>
               <p className="text-primary/80 leading-relaxed">
                 {EVENTS_PAGE.burgerStand.text}
               </p>
-            </div>
+            </ScrollReveal>
           </div>
-        </motion.div>
+        </div>
       </section>
 
       {/* Video Placeholders */}
@@ -157,12 +138,14 @@ export default function EventsPage() {
           <h2 className="mb-6 text-2xl font-bold text-primary sm:text-3xl">
             {EVENTS_PAGE.cta}
           </h2>
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="rounded-full bg-primary px-8 py-3 font-bold text-light transition-all hover:bg-dark hover:shadow-lg"
-          >
-            להזמנת אירוע
-          </button>
+          <MagneticButton>
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="animate-pulse-glow rounded-full bg-primary px-8 py-3 font-bold text-light transition-all hover:bg-dark hover:shadow-lg"
+            >
+              להזמנת אירוע
+            </button>
+          </MagneticButton>
         </div>
       </section>
 

@@ -1,7 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import StaggerContainer from '@/components/animations/StaggerContainer';
+import StaggerItem from '@/components/animations/StaggerItem';
 
 const GALLERY_ITEMS = [
   { id: 1, src: '/images/06-salad-fresh.jpg', alt: 'סלט טרי — יוני71' },
@@ -22,16 +23,9 @@ export default function Gallery() {
         <h2 className="mb-10 text-center text-3xl font-bold text-primary">
           הגלריה שלנו
         </h2>
-        <div className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
-          {GALLERY_ITEMS.map((item, index) => (
-            <motion.div
-              key={item.id}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05 }}
-              className="group relative aspect-square overflow-hidden rounded-xl"
-            >
+        <StaggerContainer staggerDelay={0.08} className="grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
+          {GALLERY_ITEMS.map((item) => (
+            <StaggerItem key={item.id} className="group relative aspect-square overflow-hidden rounded-xl">
               <Image
                 src={item.src}
                 alt={item.alt}
@@ -41,9 +35,9 @@ export default function Gallery() {
               />
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-primary/0 transition-colors group-hover:bg-primary/20" />
-            </motion.div>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );
