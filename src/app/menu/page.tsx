@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { MENU_HIGHLIGHTS, MENU_BANNER } from '@/lib/constants';
 import { useState } from 'react';
@@ -33,13 +34,14 @@ export default function MenuPage() {
                 index % 2 !== 0 ? 'md:flex-row-reverse' : ''
               }`}
             >
-              {/* Placeholder Image */}
-              <div className="aspect-[4/3] w-full flex-1 overflow-hidden rounded-2xl bg-primary/10">
-                <div className="flex h-full w-full items-center justify-center text-primary/20">
-                  <svg className="h-20 w-20" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
+              <div className="relative aspect-[4/3] w-full flex-1 overflow-hidden rounded-2xl">
+                <Image
+                  src={item.imageSrc}
+                  alt={item.imageAlt}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
 
               {/* Text */}

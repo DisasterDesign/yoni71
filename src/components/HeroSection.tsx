@@ -1,18 +1,24 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import { HERO } from '@/lib/constants';
 
 export default function HeroSection({ onOrderClick }: { onOrderClick: () => void }) {
   return (
     <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-primary">
-      {/* Background placeholder with overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-primary/80 to-primary" />
+      {/* Background image */}
+      <Image
+        src="/images/07-shawarma-plate.jpg"
+        alt="שווארמה בצלחת עם אורז ותוספות — יוני71"
+        fill
+        priority
+        quality={85}
+        className="object-cover"
+      />
 
-      {/* Placeholder image background */}
-      <div className="absolute inset-0 bg-primary/30">
-        <div className="h-full w-full bg-[url('/images/hero-placeholder.jpg')] bg-cover bg-center opacity-40" />
-      </div>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-primary/80 to-primary" />
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
         <h1 className="mb-6 text-4xl font-black leading-tight text-light sm:text-5xl lg:text-6xl">

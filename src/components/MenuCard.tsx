@@ -1,21 +1,26 @@
 'use client';
 
+import Image from 'next/image';
+
 interface MenuCardProps {
   name: string;
   description: string;
+  imageSrc: string;
+  imageAlt: string;
   onOrderClick: () => void;
 }
 
-export default function MenuCard({ name, description, onOrderClick }: MenuCardProps) {
+export default function MenuCard({ name, description, imageSrc, imageAlt, onOrderClick }: MenuCardProps) {
   return (
     <div className="group overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-xl">
-      {/* Placeholder image */}
-      <div className="aspect-[4/3] bg-muted">
-        <div className="flex h-full w-full items-center justify-center text-primary/20">
-          <svg className="h-16 w-16" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4m4-5l5-5 5 5m-5-5v12" />
-          </svg>
-        </div>
+      <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+        <Image
+          src={imageSrc}
+          alt={imageAlt}
+          fill
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        />
       </div>
       <div className="p-5">
         <h3 className="mb-2 text-lg font-bold text-primary">{name}</h3>

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import MenuCard from '@/components/MenuCard';
@@ -29,6 +30,8 @@ export default function Home() {
                 key={item.id}
                 name={item.name}
                 description={item.shortDesc}
+                imageSrc={item.imageSrc}
+                imageAlt={item.imageAlt}
                 onOrderClick={() => setIsModalOpen(true)}
               />
             ))}
@@ -52,13 +55,14 @@ export default function Home() {
               </h2>
               <div className="mx-auto h-1 w-20 rounded bg-accent md:mx-0" />
             </div>
-            {/* Placeholder image */}
-            <div className="aspect-square w-64 flex-shrink-0 rounded-2xl bg-dark/50">
-              <div className="flex h-full w-full items-center justify-center text-light/20">
-                <svg className="h-16 w-16" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
+            <div className="relative aspect-square w-64 flex-shrink-0 overflow-hidden rounded-2xl">
+              <Image
+                src="/images/02-yoni-and-father.jpg"
+                alt="יוני ואביו — המייסדים של יוני71"
+                fill
+                className="object-cover"
+                sizes="256px"
+              />
             </div>
           </div>
         </motion.div>

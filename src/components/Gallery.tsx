@@ -1,11 +1,19 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 
-const GALLERY_ITEMS = Array.from({ length: 9 }, (_, i) => ({
-  id: i + 1,
-  alt: `תמונה ${i + 1} מיוני71`,
-}));
+const GALLERY_ITEMS = [
+  { id: 1, src: '/images/06-salad-fresh.jpg', alt: 'סלט טרי — יוני71' },
+  { id: 2, src: '/images/07-shawarma-plate.jpg', alt: 'שווארמה בצלחת עם אורז ותוספות — יוני71' },
+  { id: 3, src: '/images/08-shawarma-machine.jpg', alt: 'שיפודי שווארמה במכונה — יוני71' },
+  { id: 4, src: '/images/09-vitrina-salads.jpg', alt: 'ויטרינת סלטים — יוני71' },
+  { id: 5, src: '/images/10-laffa-wrap.jpg', alt: 'לאפה עם שווארמה — יוני71' },
+  { id: 6, src: '/images/11-laffa-wrap-2.jpg', alt: 'לאפה עם שווארמה — יוני71' },
+  { id: 7, src: '/images/12-pita-olives.jpg', alt: 'פיתה עם זיתים על קרש — יוני71' },
+  { id: 8, src: '/images/13-hummus.jpg', alt: 'חומוס — יוני71' },
+  { id: 9, src: '/images/14-yoni-kisses-father.jpg', alt: 'יוני מנשק את אביו — יוני71' },
+];
 
 export default function Gallery() {
   return (
@@ -22,14 +30,15 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.05 }}
-              className="group relative aspect-square overflow-hidden rounded-xl bg-primary/20"
+              className="group relative aspect-square overflow-hidden rounded-xl"
             >
-              {/* Placeholder */}
-              <div className="flex h-full w-full items-center justify-center text-light/30">
-                <svg className="h-12 w-12" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                </svg>
-              </div>
+              <Image
+                src={item.src}
+                alt={item.alt}
+                fill
+                className="object-cover transition-transform duration-300 group-hover:scale-110"
+                sizes="(max-width: 768px) 50vw, 33vw"
+              />
               {/* Hover overlay */}
               <div className="absolute inset-0 bg-primary/0 transition-colors group-hover:bg-primary/20" />
             </motion.div>

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {
   NAV_LINKS,
   ADDRESS_FULL,
@@ -13,13 +14,14 @@ export default function Footer() {
     <footer className="bg-primary text-light" role="contentinfo">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         {/* Top Row - Logo */}
-        <div className="mb-8 text-center">
-          <span className="font-montserrat text-3xl font-bold text-accent">
-            Y-71
-          </span>
-          <p className="font-montserrat text-xs tracking-widest text-light/80">
-            BURGER &amp; BAR
-          </p>
+        <div className="mb-8 flex justify-center">
+          <Image
+            src="/images/01-logo.png"
+            alt="לוגו יוני71 — Burger & Bar"
+            width={40}
+            height={45}
+            className="h-12 w-auto"
+          />
         </div>
 
         {/* Middle Row */}
@@ -78,12 +80,15 @@ export default function Footer() {
                 href="https://waze.com/ul?q=רמת+השרון+72"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-accent/20 text-accent transition-colors hover:bg-accent/30"
+                className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-full bg-accent/20 transition-colors hover:bg-accent/30"
                 aria-label="נווט עם Waze"
               >
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.486 2 2 6.486 2 12c0 1.554.357 3.025.997 4.341L2 22l5.659-.997A9.954 9.954 0 0012 22c5.514 0 10-4.486 10-10S17.514 2 12 2zm-1 15a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm4 0a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm1-6c0 .552-.448 1-1 1h-1v1a1 1 0 01-2 0v-1h-1a1 1 0 010-2h1V9a1 1 0 012 0v1h1c.552 0 1 .448 1 1z" />
-                </svg>
+                <Image
+                  src="/images/04-waze-icon.png"
+                  alt="Waze"
+                  width={24}
+                  height={24}
+                />
               </a>
             </div>
           </div>

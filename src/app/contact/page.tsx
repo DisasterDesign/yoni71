@@ -32,13 +32,16 @@ export default function ContactPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              {/* Google Maps Placeholder */}
+              {/* Google Maps */}
               <div className="mb-8 aspect-video overflow-hidden rounded-2xl bg-muted">
                 <iframe
-                  src="about:blank"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3378.5!2d34.8!3d32.15!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzLCsDA5JzAwLjAiTiAzNMKwNDgnMDAuMCJF!5e0!3m2!1siw!2sil!4v1234567890"
                   className="h-full w-full"
+                  style={{ border: 0 }}
                   title="מפת המסעדה"
                   loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
                 />
               </div>
 

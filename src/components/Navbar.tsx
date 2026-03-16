@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { NAV_LINKS } from '@/lib/constants';
 
 export default function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
@@ -16,13 +17,15 @@ export default function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex flex-col items-center">
-            <span className="font-montserrat text-2xl font-bold text-accent">
-              Y-71
-            </span>
-            <span className="font-montserrat text-[10px] tracking-widest text-light">
-              BURGER &amp; BAR
-            </span>
+          <Link href="/" className="flex-shrink-0">
+            <Image
+              src="/images/01-logo.png"
+              alt="לוגו יוני71 — Burger & Bar"
+              width={50}
+              height={56}
+              priority
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Links */}
