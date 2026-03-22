@@ -1,5 +1,5 @@
-export const SITE_NAME = 'YONI 71 — Burger & Bar';
-export const SITE_NAME_HE = 'יוני 71 — בורגר אנד בר';
+export const SITE_NAME = 'YONI 71';
+export const SITE_NAME_HE = 'יוני 71';
 export const BUSINESS_NAME = 'יוני71 בע"מ';
 export const PHONE_1 = '*8694*';
 export const PHONE_2 = '*7998*';
@@ -17,8 +17,7 @@ export const NAV_LINKS = [
 ];
 
 export const HERO = {
-  title: 'להאכיל אנשים — זאת המצווה הכי גדולה',
-  subtitle: 'YONI 71 — BURGER & BAR',
+  title: '״להאכיל אנשים — זאת המצווה הכי גדולה״',
   cta1: 'להזמנה מהירה',
   cta2: 'לתפריט',
 };

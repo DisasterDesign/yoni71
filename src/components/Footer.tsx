@@ -29,7 +29,7 @@ export default function Footer() {
             >
               <Image
                 src="/images/01-logo.png"
-                alt="לוגו יוני71 — Burger & Bar"
+                alt="לוגו יוני71"
                 width={40}
                 height={45}
                 className="h-12 w-auto"

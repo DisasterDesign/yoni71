@@ -33,29 +33,23 @@ export default function HeroSection({ onOrderClick }: { onOrderClick: () => void
       <div className="absolute inset-0 bg-gradient-to-b from-dark/70 via-primary/80 to-primary" />
 
       <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
-        <TextReveal
-          text={HERO.title}
-          className="mb-6 text-4xl font-black leading-tight text-light sm:text-5xl lg:text-6xl"
-          delay={0.3}
-        />
+        <blockquote>
+          <TextReveal
+            text={HERO.title}
+            className="mb-4 text-3xl font-black leading-tight text-light sm:text-5xl lg:text-6xl"
+            delay={0.3}
+          />
+          <motion.cite
+            className="block text-lg font-light not-italic text-accent sm:text-xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.0 }}
+          >
+            — יוני לוי
+          </motion.cite>
+        </blockquote>
 
-        {/* Separator line */}
-        <motion.div
-          className="mx-auto mb-6 h-16 w-px bg-accent"
-          initial={{ scaleX: 0 }}
-          whileInView={{ scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          style={{ originX: 0.5 }}
-        />
-
-        <motion.p
-          className="mb-10 font-montserrat text-lg tracking-wider text-accent sm:text-xl"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0 }}
-        >
-          {HERO.subtitle}
-        </motion.p>
+        <div className="mb-10" />
 
         <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
           <MagneticButton>

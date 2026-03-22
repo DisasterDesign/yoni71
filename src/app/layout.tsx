@@ -16,15 +16,19 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   title: {
-    default: 'YONI 71 — Burger & Bar | שווארמה והמבורגרים כשרים ברמת השרון',
+    default: 'YONI 71 — שווארמה כשרה ברמת השרון',
     template: '%s | YONI 71',
   },
   description:
-    'מסעדת שווארמה והמבורגרים כשרה ברמת השרון. 100% בשר טרי, שירות אירועים, משלוחים. להאכיל אנשים — זאת המצווה הכי גדולה.',
+    'מסעדת שווארמה כשרה ברמת השרון. שווארמה פרגית, עגל והודו — 100% בשר טרי. שירות אירועים וקייטרינג.',
+  icons: {
+    icon: '/images/01-logo.png',
+    apple: '/images/01-logo.png',
+  },
   openGraph: {
     type: 'website',
     locale: 'he_IL',
-    siteName: 'YONI 71 — Burger & Bar',
+    siteName: 'YONI 71',
   },
 };
 
@@ -36,8 +40,8 @@ export default function RootLayout({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Restaurant',
-    name: 'YONI 71 — Burger & Bar',
-    description: 'מסעדת שווארמה והמבורגרים כשרה ברמת השרון',
+    name: 'YONI 71',
+    description: 'מסעדת שווארמה כשרה ברמת השרון',
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'רמת השרון 72',
@@ -45,13 +49,16 @@ export default function RootLayout({
       addressCountry: 'IL',
     },
     telephone: '*8694*',
-    servesCuisine: ['Israeli', 'Middle Eastern', 'Shawarma', 'Burgers'],
+    servesCuisine: ['Israeli', 'Middle Eastern', 'Shawarma'],
     priceRange: '$$',
   };
 
   return (
     <html lang="he" dir="rtl" className={`${heebo.variable} ${montserrat.variable}`}>
       <head>
+        <noscript>
+          <style dangerouslySetInnerHTML={{ __html: '[style*="opacity: 0"],[style*="opacity:0"]{opacity:1!important;transform:none!important}' }} />
+        </noscript>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -27,7 +27,7 @@ export default function TextReveal({
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={{
         hidden: {},
         visible: { transition: { staggerChildren: 0.04, delayChildren: delay } },

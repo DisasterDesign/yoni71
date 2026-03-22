@@ -34,7 +34,7 @@ export default function ScrollReveal({
   distance = 60,
   className = '',
   once = true,
-  threshold = 0.2,
+  threshold = 0.05,
 }: ScrollRevealProps) {
   const shouldReduceMotion = useReducedMotion();
 

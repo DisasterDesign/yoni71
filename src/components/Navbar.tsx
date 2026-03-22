@@ -42,7 +42,7 @@ export default function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
             >
               <Image
                 src="/images/01-logo.png"
-                alt="לוגו יוני71 — Burger & Bar"
+                alt="לוגו יוני71"
                 width={50}
                 height={56}
                 priority

@@ -1,18 +1,16 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import HeroSection from '@/components/HeroSection';
 import MenuCard from '@/components/MenuCard';
 import Gallery from '@/components/Gallery';
 import EventsTeaser from '@/components/EventsTeaser';
-import { MENU_HIGHLIGHTS, BE_SPECIAL } from '@/lib/constants';
+import { MENU_HIGHLIGHTS } from '@/lib/constants';
 import { useState } from 'react';
 import WhatsAppModal from '@/components/WhatsAppModal';
 import ScrollReveal from '@/components/animations/ScrollReveal';
 import StaggerContainer from '@/components/animations/StaggerContainer';
 import StaggerItem from '@/components/animations/StaggerItem';
 import MagneticButton from '@/components/animations/MagneticButton';
-import ParallaxImage from '@/components/animations/ParallaxImage';
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -43,35 +41,6 @@ export default function Home() {
               </StaggerItem>
             ))}
           </StaggerContainer>
-        </div>
-      </section>
-
-      {/* Be Special */}
-      <section className="bg-primary py-20">
-        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center gap-10 md:flex-row">
-            <ScrollReveal direction="right" className="flex-1 text-center md:text-right">
-              <h2 className="mb-6 text-3xl font-bold text-light sm:text-4xl">
-                {BE_SPECIAL.text}
-              </h2>
-              <motion.div
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
-                style={{ originX: 0 }}
-                className="mx-auto h-1 w-20 rounded bg-accent md:mx-0"
-              />
-            </ScrollReveal>
-            <ScrollReveal direction="left" className="relative w-64 flex-shrink-0">
-              <ParallaxImage
-                src="/images/02-yoni-and-father.jpg"
-                alt="יוני ואביו — המייסדים של יוני71"
-                speed={0.15}
-                className="aspect-square w-64 flex-shrink-0 rounded-2xl"
-              />
-            </ScrollReveal>
-          </div>
         </div>
       </section>
 
