@@ -20,8 +20,8 @@ export default function HeroSection({ onOrderClick }: { onOrderClick: () => void
         style={{ y: prefersReducedMotion ? 0 : backgroundY }}
       >
         <Image
-          src="/images/06-salad-fresh.jpg"
-          alt="3 גלגלי שווארמה במסעדה — יוני71"
+          src="/images/hero-shawarma.jpg"
+          alt="מגש שווארמה טרייה עם אורז וירקות"
           fill
           priority
           quality={85}

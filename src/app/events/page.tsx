@@ -69,8 +69,8 @@ export default function EventsPage() {
           <div className="flex flex-col items-center gap-6 md:gap-10 md:flex-row">
             <ScrollReveal direction="left" className="w-full flex-1">
               <ParallaxImage
-                src="/images/06-salad-fresh.jpg"
-                alt="גלגלי שווארמה במסעדה"
+                src="/images/restaurant-front.jpg"
+                alt="חזית מסעדת יוני71 עם גלגלי שווארמה"
                 speed={0.1}
                 className="relative aspect-[4/3] w-full rounded-2xl"
               />
@@ -117,8 +117,8 @@ export default function EventsPage() {
           <div className="flex flex-col items-center gap-6 md:gap-10 md:flex-row-reverse">
             <ScrollReveal direction="right" className="w-full flex-1">
               <ParallaxImage
-                src="/images/11-laffa-wrap-2.jpg"
-                alt="לאפה עם בשר וירקות טריים"
+                src="/images/mixed-plate.jpg"
+                alt="מגש שווארמה מיקס עגל ופרגית"
                 speed={0.1}
                 className="relative aspect-[4/3] w-full rounded-2xl"
               />

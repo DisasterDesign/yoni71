@@ -5,15 +5,15 @@ import StaggerContainer from '@/components/animations/StaggerContainer';
 import StaggerItem from '@/components/animations/StaggerItem';
 
 const GALLERY_ITEMS = [
-  { id: 1, src: '/images/06-salad-fresh.jpg', alt: 'סלט טרי — יוני71' },
-  { id: 2, src: '/images/07-shawarma-plate.jpg', alt: 'שווארמה בצלחת עם אורז ותוספות — יוני71' },
-  { id: 3, src: '/images/08-shawarma-machine.jpg', alt: 'שיפודי שווארמה במכונה — יוני71' },
-  { id: 4, src: '/images/09-vitrina-salads.jpg', alt: 'ויטרינת סלטים — יוני71' },
-  { id: 5, src: '/images/10-laffa-wrap.jpg', alt: 'לאפה עם שווארמה — יוני71' },
-  { id: 6, src: '/images/11-laffa-wrap-2.jpg', alt: 'לאפה עם שווארמה — יוני71' },
-  { id: 7, src: '/images/12-pita-olives.jpg', alt: 'פיתה עם זיתים על קרש — יוני71' },
-  { id: 8, src: '/images/13-hummus.jpg', alt: 'חומוס — יוני71' },
-  { id: 9, src: '/images/14-yoni-kisses-father.jpg', alt: 'יוני מנשק את אביו — יוני71' },
+  { id: 1, src: '/images/shawarma-pargit-plate.jpg', alt: 'שווארמה פרגית בצלחת עם אורז' },
+  { id: 2, src: '/images/shawarma-veal-plate.jpg', alt: 'שווארמה עגל בצלחת עם אורז' },
+  { id: 3, src: '/images/pita-veal.jpg', alt: 'עגל בפיתה על קרש עץ' },
+  { id: 4, src: '/images/baguette-shawarma.jpg', alt: 'שווארמה בבאגט עם ירקות' },
+  { id: 5, src: '/images/lafa-veal-wrap.jpg', alt: 'לאפה עגל בנייר יוני71' },
+  { id: 6, src: '/images/falafel-plate.jpg', alt: 'פלאפל עם טחינה' },
+  { id: 7, src: '/images/skewers-plate.jpg', alt: 'שיפודים עם סלט טרי' },
+  { id: 8, src: '/images/schnitzel.jpg', alt: 'שניצל קריספי' },
+  { id: 9, src: '/images/kebab-entrecote.jpg', alt: 'כבש ואנטרקוט בפיתה' },
 ];
 
 export default function Gallery() {
