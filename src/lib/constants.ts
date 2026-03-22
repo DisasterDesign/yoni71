@@ -51,8 +51,8 @@ export const MENU_HIGHLIGHTS = [
     id: 'turkey',
     name: 'שווארמה הודו נקבה',
     nameEn: 'SHAWARMA TURKISH',
-    imageSrc: '/images/shawarma-lafa.jpg',
-    imageAlt: 'שווארמה בלאפה עטופה בנייר יוני71',
+    imageSrc: '/images/shawarma-turkey-pita.jpg',
+    imageAlt: 'שווארמה הודו בפיתה על קרש עץ',
     shortDesc: 'בשר הודו משובח ובריא להפליא',
     fullDesc:
       'אז אם גם אתם רוצים? שווארמה הודו נקבה- בשר הודו משובח ובריא להפליא! מנה מיוחדת למי שרוצה לשמור על הבריאות אך עדיין אוהב להתפנק על מנת שווארמה טובה ואיכותית.',
