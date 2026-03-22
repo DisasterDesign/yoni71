@@ -10,8 +10,8 @@ export default function AboutPage() {
   return (
     <section className="bg-primary min-h-screen">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-12 md:flex-row">
-          <ScrollReveal direction="left" className="relative aspect-[3/4] w-full max-w-md flex-shrink-0 md:w-1/2">
+        <div className="flex flex-col items-center gap-6 md:gap-12 md:flex-row">
+          <ScrollReveal direction="left" className="relative aspect-[3/4] w-full max-w-xs sm:max-w-md flex-shrink-0 md:w-1/2">
             <ParallaxImage
               src="/images/15-yoni-avatar-photo.jpg"
               alt="יוני — הבעלים של יוני71"

@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           {/* Middle Row */}
-          <StaggerContainer className="mb-8 grid grid-cols-1 gap-8 text-center md:grid-cols-3">
+          <StaggerContainer className="mb-8 grid grid-cols-1 gap-6 text-center md:gap-8 md:grid-cols-3">
             {/* Navigation */}
             <StaggerItem>
               <h3 className="mb-3 text-sm font-bold text-accent">ניווט</h3>

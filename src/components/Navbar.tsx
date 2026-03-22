@@ -126,7 +126,7 @@ export default function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
                 key={link.href}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="nav-link-hover rounded px-3 py-2 text-light transition-colors hover:bg-light/10"
+                className="nav-link-hover rounded px-3 py-3 text-light transition-colors hover:bg-light/10"
               >
                 {link.label}
               </Link>

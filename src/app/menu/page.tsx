@@ -26,9 +26,9 @@ export default function MenuPage() {
           key={item.id}
           className={index % 2 === 0 ? 'bg-light' : 'bg-muted'}
         >
-          <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-7xl px-4 py-10 sm:py-16 sm:px-6 lg:px-8">
             <div
-              className={`flex flex-col items-center gap-10 md:flex-row ${
+              className={`flex flex-col items-center gap-6 md:gap-10 md:flex-row ${
                 index % 2 !== 0 ? 'md:flex-row-reverse' : ''
               }`}
             >
@@ -54,7 +54,7 @@ export default function MenuPage() {
                 <MagneticButton>
                   <button
                     onClick={() => setIsModalOpen(true)}
-                    className="rounded-full bg-accent px-8 py-3 font-bold text-primary transition-all hover:bg-accent/90 hover:shadow-lg"
+                    className="rounded-full bg-accent px-6 py-3 font-bold text-primary transition-all hover:bg-accent/90 hover:shadow-lg sm:px-8"
                   >
                     להזמנה לחץ כאן
                   </button>

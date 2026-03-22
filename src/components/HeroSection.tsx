@@ -49,21 +49,21 @@ export default function HeroSection({ onOrderClick }: { onOrderClick: () => void
           </motion.cite>
         </blockquote>
 
-        <div className="mb-8 sm:mb-10" />
+        <div className="mb-6 sm:mb-10" />
 
-        <div className="flex flex-col items-center gap-3 px-6 sm:flex-row sm:gap-4 sm:justify-center sm:px-0">
-          <MagneticButton>
+        <div className="flex flex-col items-stretch gap-4 px-4 sm:flex-row sm:items-center sm:justify-center sm:px-0">
+          <MagneticButton className="sm:w-auto">
             <button
               onClick={onOrderClick}
-              className="rounded-full bg-accent px-8 py-3 font-bold text-primary transition-all hover:bg-accent/90 hover:shadow-lg"
+              className="w-full rounded-full bg-accent px-6 py-3 font-bold text-primary transition-all hover:bg-accent/90 hover:shadow-lg sm:w-auto sm:px-8"
             >
               {HERO.cta1}
             </button>
           </MagneticButton>
-          <MagneticButton>
+          <MagneticButton className="sm:w-auto">
             <Link
               href="/menu"
-              className="rounded-full border-2 border-light px-8 py-3 font-bold text-light transition-all hover:bg-light/10"
+              className="block w-full rounded-full border-2 border-light px-6 py-3 text-center font-bold text-light transition-all hover:bg-light/10 sm:w-auto sm:px-8"
             >
               {HERO.cta2}
             </Link>

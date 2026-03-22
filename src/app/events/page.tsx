@@ -39,7 +39,7 @@ export default function EventsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-dark py-24">
+      <section className="relative bg-dark py-16 sm:py-24">
         <div className="absolute inset-0 bg-gradient-to-b from-dark via-primary to-dark opacity-80" />
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center">
           <span className="mb-4 block font-montserrat text-2xl font-bold text-accent">
@@ -66,7 +66,7 @@ export default function EventsPage() {
       {/* Shawarma Stand */}
       <section className="bg-light py-16">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="flex flex-col items-center gap-10 md:flex-row">
+          <div className="flex flex-col items-center gap-6 md:gap-10 md:flex-row">
             <ScrollReveal direction="left" className="w-full flex-1">
               <ParallaxImage
                 src="/images/06-salad-fresh.jpg"
@@ -114,7 +114,7 @@ export default function EventsPage() {
       {/* Burger Stand */}
       <section className="bg-light py-16">
         <div className="mx-auto max-w-6xl px-4">
-          <div className="flex flex-col items-center gap-10 md:flex-row-reverse">
+          <div className="flex flex-col items-center gap-6 md:gap-10 md:flex-row-reverse">
             <ScrollReveal direction="right" className="w-full flex-1">
               <ParallaxImage
                 src="/images/11-laffa-wrap-2.jpg"
