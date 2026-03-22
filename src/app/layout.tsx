@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   description:
     'מסעדת שווארמה כשרה ברמת השרון. שווארמה פרגית, עגל והודו — 100% בשר טרי. שירות אירועים וקייטרינג.',
   icons: {
-    icon: '/images/01-logo.png',
-    apple: '/images/01-logo.png',
+    icon: '/images/favicon-shawarma.png',
+    apple: '/images/favicon-shawarma.png',
   },
   openGraph: {
     type: 'website',

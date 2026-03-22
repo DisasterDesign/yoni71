@@ -27,8 +27,8 @@ export const MENU_HIGHLIGHTS = [
     id: 'pargit',
     name: 'שווארמה פרגית',
     nameEn: 'SHAWARMA SPRING CHICKEN',
-    imageSrc: '/images/08-shawarma-machine.jpg',
-    imageAlt: 'שיפודי שווארמה במכונה — יוני71',
+    imageSrc: '/images/shawarma-spit-1.jpg',
+    imageAlt: 'גלגל שווארמה פרגית — יוני71',
     shortDesc: 'שווארמה עשויה 100% בשר עוף איכותי וטרי',
     fullDesc:
       'אז אם גם אתם רוצים? אין ספק שזו תהיה הבחירה של רבים מכם ולא בכדי. בשר הפרגית, טרי ועסיסי ביחד עם מגוון הסלטים המפנקים שיש לנו יוצרים גן עדן בביס.',
@@ -39,8 +39,8 @@ export const MENU_HIGHLIGHTS = [
     id: 'veal',
     name: 'שווארמה עגל צעיר',
     nameEn: 'SHAWARMA BEEF (YOUNG CALF)',
-    imageSrc: '/images/08-shawarma-machine.jpg',
-    imageAlt: 'שיפודי שווארמה על גלגל השווארמה — יוני71',
+    imageSrc: '/images/shawarma-spit-2.jpg',
+    imageAlt: 'גלגלי שווארמה עגל — יוני71',
     shortDesc: 'שווארמת עגל היא ללא ספק המנה הכי מפנקת שלנו',
     fullDesc:
       'אז אם גם אתם רוצים? אין ספק שזו תהיה הבחירה של רבים מכם ולא בכדי. בשר העגל טרי ועסיסי ביחד עם מגוון הסלטים המפנקים שיש לנו יוצרים גן עדן בביס.',
@@ -51,8 +51,8 @@ export const MENU_HIGHLIGHTS = [
     id: 'turkey',
     name: 'שווארמה הודו נקבה',
     nameEn: 'SHAWARMA TURKISH',
-    imageSrc: '/images/08-shawarma-machine.jpg',
-    imageAlt: 'שיפודי שווארמה על גלגל השווארמה — יוני71',
+    imageSrc: '/images/shawarma-spit-3.jpg',
+    imageAlt: 'גלגל שווארמה הודו — יוני71',
     shortDesc: 'בשר הודו משובח ובריא להפליא',
     fullDesc:
       'אז אם גם אתם רוצים? שווארמה הודו נקבה- בשר הודו משובח ובריא להפליא! מנה מיוחדת למי שרוצה לשמור על הבריאות אך עדיין אוהב להתפנק על מנת שווארמה טובה ואיכותית.',
