@@ -20,8 +20,8 @@ export default function HeroSection({ onOrderClick }: { onOrderClick: () => void
         style={{ y: prefersReducedMotion ? 0 : backgroundY }}
       >
         <Image
-          src="/images/07-shawarma-plate.jpg"
-          alt="שווארמה בצלחת עם אורז ותוספות — יוני71"
+          src="/images/08-shawarma-machine.jpg"
+          alt="שיפודי שווארמה על גלגל השווארמה — יוני71"
           fill
           priority
           quality={85}
@@ -49,9 +49,9 @@ export default function HeroSection({ onOrderClick }: { onOrderClick: () => void
           </motion.cite>
         </blockquote>
 
-        <div className="mb-10" />
+        <div className="mb-8 sm:mb-10" />
 
-        <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <div className="flex flex-col items-center gap-3 px-6 sm:flex-row sm:gap-4 sm:justify-center sm:px-0">
           <MagneticButton>
             <button
               onClick={onOrderClick}
