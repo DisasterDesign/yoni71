@@ -7,7 +7,6 @@ import {
   NAV_LINKS,
   ADDRESS_FULL,
   PHONE_1,
-  PHONE_2,
   FOOTER,
   WHATSAPP_URL,
 } from '@/lib/constants';
@@ -28,7 +27,7 @@ export default function Footer() {
               viewport={{ once: true }}
             >
               <Image
-                src="/images/01-logo.png"
+                src="/images/logo.png"
                 alt="לוגו יוני71"
                 width={40}
                 height={45}
@@ -61,7 +60,7 @@ export default function Footer() {
               <h3 className="mb-3 text-sm font-bold text-accent">יצירת קשר</h3>
               <p className="text-sm text-light/80">{ADDRESS_FULL}</p>
               <p className="mt-1 text-sm text-light/80">
-                טלפון: {PHONE_1} / {PHONE_2}
+                טלפון: {PHONE_1}
               </p>
             </StaggerItem>
 

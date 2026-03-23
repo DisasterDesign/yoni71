@@ -1,8 +1,7 @@
 export const SITE_NAME = 'YONI 71';
 export const SITE_NAME_HE = 'יוני 71';
 export const BUSINESS_NAME = 'יוני71 בע"מ';
-export const PHONE_1 = '*8694*';
-export const PHONE_2 = '*7998*';
+export const PHONE_1 = '03-631-6161';
 export const ADDRESS = 'רמת השרון 72';
 export const ADDRESS_FULL = 'רמת השרון 72, קוקלה ביליס';
 export const WHATSAPP_NUMBER = '972000000000'; // Replace with actual number
@@ -40,8 +39,8 @@ export const MENU_HIGHLIGHTS = [
     id: 'veal',
     name: 'שווארמה עגל צעיר',
     nameEn: 'SHAWARMA BEEF (YOUNG CALF)',
-    imageSrc: '/images/shawarma-veal-plate.jpg',
-    imageAlt: 'שווארמה עגל בצלחת עם אורז,יוני71',
+    imageSrc: '/images/lafa-veal-wrap.jpg',
+    imageAlt: 'שווארמה עגל בלאפה על קרש עץ,יוני71',
     shortDesc: 'שווארמת עגל היא ללא ספק המנה הכי מפנקת שלנו',
     fullDesc:
       'אז אם גם אתם רוצים? אין ספק שזו תהיה הבחירה של רבים מכם ולא בכדי. בשר העגל טרי ועסיסי ביחד עם מגוון הסלטים המפנקים שיש לנו יוצרים גן עדן בביס.',
@@ -67,9 +66,10 @@ export const BE_SPECIAL = {
 };
 
 export const EVENTS_TEASER = {
-  title: 'חדש! שירות אירועים עד בית הלקוח',
-  subtitle: 'שירות אירועים עד בית הלקוח!',
-  cta: 'לפרטים',
+  badge: 'חדש',
+  title: 'שירות אירועים עד בית הלקוח',
+  subtitle: 'אירוע פרטי בבית שלכם',
+  cta: 'לפרטים והצעת מחיר',
 };
 
 export const ABOUT_TEXT = [
