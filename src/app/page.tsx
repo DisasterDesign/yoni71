@@ -37,8 +37,8 @@ export default function Home() {
             ))}
           </StaggerContainer>
           <ScrollReveal direction="up">
-            <div className="mt-12 text-center">
-              <p className="mb-6 text-lg text-primary/80">
+            <div className="mt-14 flex flex-col items-center gap-6 text-center">
+              <p className="text-xl font-semibold text-primary">
                 לתפריט המלא ולהזמנה לחצו כאן
               </p>
               <MagneticButton>
@@ -46,9 +46,10 @@ export default function Home() {
                   href={TABIT_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block rounded-full bg-accent px-8 py-3 font-bold text-primary transition-all hover:bg-accent/90 hover:shadow-lg"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-lg font-bold text-light transition-all hover:bg-primary/90 hover:shadow-lg"
                 >
                   לתפריט ולהזמנה
+                  <svg className="h-5 w-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                 </a>
               </MagneticButton>
             </div>
@@ -64,10 +65,10 @@ export default function Home() {
 
       {/* Quick Order Section */}
       <ScrollReveal direction="up">
-        <section className="bg-primary py-20">
-          <div className="mx-auto max-w-2xl px-4 text-center">
-            <h2 className="mb-6 text-3xl font-bold text-light">רוצים להזמין? זה הרגע!</h2>
-            <p className="mb-8 text-light/80">
+        <section className="bg-[#1E1E1E] py-20">
+          <div className="mx-auto flex max-w-2xl flex-col items-center gap-8 px-4 text-center">
+            <h2 className="text-3xl font-bold text-white sm:text-4xl">רוצים להזמין? זה הרגע!</h2>
+            <p className="text-lg text-white/70">
               הזמינו עכשיו דרך המערכת שלנו בלחיצה אחת
             </p>
             <MagneticButton>
@@ -75,9 +76,10 @@ export default function Home() {
                 href={TABIT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="animate-shimmer inline-flex items-center gap-3 rounded-full bg-accent px-6 py-3 text-base font-bold text-primary transition-all hover:bg-accent/90 hover:shadow-lg sm:px-8 sm:py-4 sm:text-lg"
+                className="inline-flex items-center gap-3 rounded-full bg-white px-10 py-4 text-lg font-bold text-[#1E1E1E] transition-all hover:bg-white/90 hover:shadow-xl"
               >
                 הזמן עכשיו
+                <svg className="h-5 w-5 rtl:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
               </a>
             </MagneticButton>
           </div>
