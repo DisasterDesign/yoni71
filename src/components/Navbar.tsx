@@ -41,7 +41,7 @@ export default function Navbar() {
               transition={{ type: 'spring', stiffness: 200, damping: 15 }}
             >
               <Image
-                src="/images/logo-header.png"
+                src="/images/logo-header.svg"
                 alt="לוגו יוני71"
                 width={100}
                 height={112}
