@@ -23,8 +23,8 @@ export default function Navbar() {
     <nav
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'backdrop-blur-md bg-[#1E1E1E]/95 shadow-lg'
-          : 'bg-[#1E1E1E]'
+          ? 'backdrop-blur-md bg-[#004218]/95 shadow-lg'
+          : 'bg-[#004218]'
       }`}
       role="navigation"
       aria-label="ניווט ראשי"
@@ -121,7 +121,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="border-t border-light/10 bg-[#1E1E1E] md:hidden">
+        <div className="border-t border-light/10 bg-[#004218] md:hidden">
           <div className="flex flex-col gap-2 px-4 py-4">
             {NAV_LINKS.map((link) => (
               <Link
