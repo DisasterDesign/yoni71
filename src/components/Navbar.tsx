@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { NAV_LINKS } from '@/lib/constants';
+import { NAV_LINKS, TABIT_URL } from '@/lib/constants';
 import MagneticButton from '@/components/animations/MagneticButton';
 
-export default function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -74,12 +74,14 @@ export default function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
               transition={{ delay: NAV_LINKS.length * 0.05, duration: 0.3 }}
             >
               <MagneticButton>
-                <button
-                  onClick={onOrderClick}
+                <a
+                  href={TABIT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="animate-pulse-glow rounded-full bg-accent px-5 py-2 text-sm font-bold text-primary transition-colors hover:bg-accent/90"
                 >
                   להזמנה
-                </button>
+                </a>
               </MagneticButton>
             </motion.div>
           </div>
@@ -131,15 +133,15 @@ export default function Navbar({ onOrderClick }: { onOrderClick: () => void }) {
                 {link.label}
               </Link>
             ))}
-            <button
-              onClick={() => {
-                setIsOpen(false);
-                onOrderClick();
-              }}
-              className="mt-2 rounded-full bg-accent px-5 py-2 text-sm font-bold text-primary"
+            <a
+              href={TABIT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="mt-2 block rounded-full bg-accent px-5 py-2 text-center text-sm font-bold text-primary"
             >
               להזמנה
-            </button>
+            </a>
           </div>
         </div>
       )}

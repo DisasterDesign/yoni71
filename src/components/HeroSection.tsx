@@ -3,11 +3,11 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion, useScroll, useTransform, useReducedMotion } from 'framer-motion';
-import { HERO } from '@/lib/constants';
+import { HERO, TABIT_URL } from '@/lib/constants';
 import TextReveal from '@/components/animations/TextReveal';
 import MagneticButton from '@/components/animations/MagneticButton';
 
-export default function HeroSection({ onOrderClick }: { onOrderClick: () => void }) {
+export default function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
   const { scrollY } = useScroll();
   const backgroundY = useTransform(scrollY, [0, 500], [0, 150]);
@@ -53,12 +53,14 @@ export default function HeroSection({ onOrderClick }: { onOrderClick: () => void
 
         <div className="flex flex-col items-stretch gap-4 px-4 sm:flex-row sm:items-center sm:justify-center sm:px-0">
           <MagneticButton className="sm:w-auto">
-            <button
-              onClick={onOrderClick}
-              className="w-full rounded-full bg-accent px-6 py-3 font-bold text-primary transition-all hover:bg-accent/90 hover:shadow-lg sm:w-auto sm:px-8"
+            <a
+              href={TABIT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-full rounded-full bg-accent px-6 py-3 text-center font-bold text-primary transition-all hover:bg-accent/90 hover:shadow-lg sm:w-auto sm:px-8"
             >
               {HERO.cta1}
-            </button>
+            </a>
           </MagneticButton>
           <MagneticButton className="sm:w-auto">
             <Link

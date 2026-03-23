@@ -1,15 +1,12 @@
 'use client';
 
-import { MENU_HIGHLIGHTS, MENU_BANNER } from '@/lib/constants';
-import { useState } from 'react';
-import WhatsAppModal from '@/components/WhatsAppModal';
+import { MENU_HIGHLIGHTS, MENU_BANNER, TABIT_URL } from '@/lib/constants';
 import ScrollReveal from '@/components/animations/ScrollReveal';
 import TextReveal from '@/components/animations/TextReveal';
 import ParallaxImage from '@/components/animations/ParallaxImage';
 import MagneticButton from '@/components/animations/MagneticButton';
 
 export default function MenuPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
@@ -52,12 +49,14 @@ export default function MenuPage() {
                 <p className="mb-4 text-primary/80 leading-relaxed">{item.fullDesc}</p>
                 <p className="mb-6 text-primary/80 leading-relaxed">{item.detailedDesc}</p>
                 <MagneticButton>
-                  <button
-                    onClick={() => setIsModalOpen(true)}
-                    className="rounded-full bg-accent px-6 py-3 font-bold text-primary transition-all hover:bg-accent/90 hover:shadow-lg sm:px-8"
+                  <a
+                    href={TABIT_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-full bg-accent px-6 py-3 font-bold text-primary transition-all hover:bg-accent/90 hover:shadow-lg sm:px-8"
                   >
                     להזמנה לחץ כאן
-                  </button>
+                  </a>
                 </MagneticButton>
               </ScrollReveal>
             </div>
@@ -74,7 +73,6 @@ export default function MenuPage() {
         </section>
       </ScrollReveal>
 
-      <WhatsAppModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </>
   );
 }

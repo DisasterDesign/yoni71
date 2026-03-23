@@ -1,16 +1,16 @@
 'use client';
 
 import Image from 'next/image';
+import { TABIT_URL } from '@/lib/constants';
 
 interface MenuCardProps {
   name: string;
   description: string;
   imageSrc: string;
   imageAlt: string;
-  onOrderClick: () => void;
 }
 
-export default function MenuCard({ name, description, imageSrc, imageAlt, onOrderClick }: MenuCardProps) {
+export default function MenuCard({ name, description, imageSrc, imageAlt }: MenuCardProps) {
   return (
     <div className="group overflow-hidden rounded-2xl bg-white shadow-md transition-all duration-300 hover:scale-[1.03] hover:shadow-xl">
       <div className="relative aspect-[4/3] overflow-hidden bg-muted">
@@ -25,12 +25,14 @@ export default function MenuCard({ name, description, imageSrc, imageAlt, onOrde
       <div className="p-5">
         <h3 className="mb-2 text-lg font-bold text-primary">{name}</h3>
         <p className="mb-4 text-sm text-primary/70 line-clamp-2">{description}</p>
-        <button
-          onClick={onOrderClick}
-          className="w-full rounded-full bg-accent px-4 py-2 text-sm font-bold text-primary transition-colors hover:bg-accent/90"
+        <a
+          href={TABIT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full rounded-full bg-accent px-4 py-2 text-center text-sm font-bold text-primary transition-colors hover:bg-accent/90"
         >
           להזמנה
-        </button>
+        </a>
       </div>
     </div>
   );

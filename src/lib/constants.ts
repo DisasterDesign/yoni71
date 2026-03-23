@@ -7,6 +7,7 @@ export const ADDRESS = 'רמת השרון 72';
 export const ADDRESS_FULL = 'רמת השרון 72, קוקלה ביליס';
 export const WHATSAPP_NUMBER = '972000000000'; // Replace with actual number
 export const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`;
+export const TABIT_URL = 'https://yoni71.mytabit.co.il/tabit-order?siteName=yoni71&step=enter';
 
 export const NAV_LINKS = [
   { label: 'דף הבית', href: '/' },
