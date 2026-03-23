@@ -31,7 +31,7 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between transition-all duration-300 ${
-          scrolled ? 'h-14' : 'h-16'
+          scrolled ? 'h-20' : 'h-28'
         }`}>
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -43,10 +43,10 @@ export default function Navbar() {
               <Image
                 src="/images/logo-header.png"
                 alt="לוגו יוני71"
-                width={50}
-                height={56}
+                width={100}
+                height={112}
                 priority
-                className="h-12 w-auto"
+                className={`w-auto transition-all duration-300 ${scrolled ? 'h-16' : 'h-24'}`}
               />
             </motion.div>
           </Link>
