@@ -31,7 +31,7 @@ export default function Navbar() {
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between transition-all duration-300 ${
-          scrolled ? 'h-20' : 'h-28'
+          scrolled ? 'h-14' : 'h-20'
         }`}>
           {/* Logo */}
           <Link href="/" className="flex-shrink-0">
@@ -46,7 +46,7 @@ export default function Navbar() {
                 width={100}
                 height={112}
                 priority
-                className={`w-auto transition-all duration-300 ${scrolled ? 'h-16' : 'h-24'}`}
+                className={`w-auto transition-all duration-300 ${scrolled ? 'h-10' : 'h-16'}`}
               />
             </motion.div>
           </Link>
