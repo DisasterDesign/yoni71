@@ -156,6 +156,17 @@ export default function Footer() {
                 {FOOTER.credit}
               </p>
               <p className="mt-1 text-xs font-bold text-accent">{FOOTER.kosher}</p>
+              <p className="mt-3 text-xs text-light/40">
+                נבנה על ידי{' '}
+                <a
+                  href="https://www.fuzionwebz.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-light/60 transition-colors hover:text-accent"
+                >
+                  Fuzion
+                </a>
+              </p>
             </div>
           </motion.div>
         </div>
